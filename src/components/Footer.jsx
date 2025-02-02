@@ -5,14 +5,12 @@ function Footer({ items }) {
 
   return (
     <footer className="stats">
-      {percentage === 100 ? (
-        <p>All Packed, You'r ready to go ✈️</p>
-      ) : (
-        <p>
-          💼 You have {length} items in your list, and you already packed{" "}
-          {packedCount} ({percentage ? percentage : 0}%)
-        </p>
-      )}
+      <em>
+        {percentage === 100
+          ? "All Packed, You'r ready to go ✈️"
+          : `💼 You have ${length} items in your list, and you already packed 
+          ${packedCount} (${percentage ? percentage : 0}%)`}
+      </em>
     </footer>
   );
 }

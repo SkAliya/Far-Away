@@ -27,10 +27,10 @@ function Item({ item, handlePacked, handleDelete }) {
     <li>
       <input
         type="checkbox"
-        checked={item.packed}
+        value={item.packed}
         onChange={() => handlePacked(item.id)}
       />
-      <span>
+      <span style={item.packed ? { textDecoration: "line-throught" } : {}}>
         {" "}
         {item.quantity} {item.description}
       </span>
